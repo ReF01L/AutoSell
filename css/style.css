@@ -120,11 +120,13 @@ body {
   padding: 16px 0;
   background-color: #507fe1;
   color: #fff;
+  opacity: 0;
   -webkit-transform: translateY(-200%);
           transform: translateY(-200%);
 }
 
 .menu_active {
+  opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -219,9 +221,10 @@ body {
 }
 
 .hero {
-  background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center 80px;
+  background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center top;
   background-size: cover;
-  padding-top: 180px;
+  margin-top: 80px;
+  padding-top: 120px;
   padding-bottom: 270px;
 }
 
@@ -239,8 +242,8 @@ body {
 
 @media (max-width: 991px) {
   .hero {
-    background-size: cover;
-    background-position: top left;
+    background-size: 100%;
+    background-position: top right;
   }
 }
 /*# sourceMappingURL=style.css.map */
