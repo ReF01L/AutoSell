@@ -222,11 +222,15 @@ body {
 }
 
 .hero {
-  background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center top;
-  background-size: cover;
+  background: #f1f1f1 url("../img/hero/car.png") no-repeat right top;
+  background-size: contain;
   margin-top: 80px;
   padding-top: 120px;
   padding-bottom: 270px;
+}
+
+.hero__content {
+  margin-left: 120px;
 }
 
 .hero__title {
