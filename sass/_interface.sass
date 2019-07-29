@@ -1,6 +1,8 @@
 body
     +light
     color: $text-color
+img
+    max-width: 100%
 .section
     padding: 100px 0
     &-title
@@ -18,13 +20,29 @@ body
     color: $primary
     +bold
     background-color: transparent
+    text-decoration: none
 .button
+    text-decoration: none
     border: none
     text-transform: uppercase
     padding: 25px 45px
     background-color: $primary
     color: #ffffff
     +bold
+    &-fitting
+        color: $primary
+        background-color: #fff
+    &-add
+        background-color: lighten($primary, 10%)
+        color: #ffffff
+    &-like
+        background-color: $primary
+        height: 30px
+        width: 30px
+        border: none
+        display: flex
+        justify-content: center
+        align-items: center
 .input
     height: 80px
     padding-left: 30px
