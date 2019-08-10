@@ -14,7 +14,7 @@
             <div class="container">
                 <nav class="menu__nav">
                     <a href="#" class="menu__link">Главная</a>
-                    <a href="#" class="menu__link">Продукция</a>
+                    <a href="#feature" class="menu__link">Преимущества</a>
                     <a href="#" class="menu__link">Каталог</a>
                     <a href="#" class="menu__link">Примеры работ</a>
                     <a href="#" class="menu__link">Примерка изображений</a>
@@ -45,7 +45,7 @@
                         <a class="navbar__phone" href="tel:+79146908643">+7 914 690-86-43</a>
                         <a class="navbar__email navbar__small-text" href="mailto:salushkin1998@bk.ru">salushkin1998@bk.ru</a>
                     </div>
-                    <button class="button-o navbar__button">Получить консультацию</button>
+                    <a href="#offer" class="button-o navbar__button">Получить консультацию</a>
                 </div>
                 <!-- /.navbar-wrap -->
             </div>
@@ -58,7 +58,7 @@
                     Гарантия <br> минимальной цены <br> на AutoSell
                 </h1>
                 <span class="hero__subtitle">от 199 999 р</span>
-                <button class="button hero__button">Заказать авто</button>
+                <a href="#offer" class="button hero__button">Заказать авто</a>
             </div>
             <!-- /.hero__content -->
         </div>
@@ -67,7 +67,7 @@
     <!-- /.header -->
 
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer__block offer-block">
                     <h2 class="offer__title">Здесь обычно за какие-то действия делают скидку</h2>
@@ -76,15 +76,22 @@
                         <div class="form__row">
                             <div class="form__group">
                                 <label for="" class="form__label">Какой-нибудь параметр</label>
-                                <input type="text" class="input form__input">
+                                <input type="hidden" name="type" id="select-type" value="С чем-то">
+                                <div class="select form__select">
+                                    <div class="select_checked">С чем-то</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="С чем-то">С чем-то</li>
+                                        <li class="select__option" data-value="Без чего-то">Без чего-то</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">Ещё параметр</label>
-                                <input type="text" class="input form__input">
+                                <input type="number" class="input form__input">
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">И ещё</label>
-                                <input type="text" class="input form__input">
+                                <input type="number" class="input form__input">
                             </div>
                         </div>
                         <div class="form__row form__row-checkbox">
@@ -121,7 +128,7 @@
             <!-- /.container -->
         </section>
         <!-- /.offer -->
-        <section class="feature section">
+        <section class="feature section" id="feature">
             <div class="container">
                 <h2 class="section-title section__title">Наши преимущества</h2>
                 <div class="feature-block">
@@ -590,9 +597,9 @@
             <!-- /.container -->
         </section>
         <!-- /.section contacts -->
-        <div class="map" id="map">
+        <!-- <div class="map" id="map">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A24037a3569451c0b952e0365bfea27c6a789c2d2c3ad1b5a8b2402a66ea395e9&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
-        </div>
+        </div> -->
         <section class="section question">
             <div class="container">
                 <div class="question-block">
@@ -649,6 +656,9 @@
     <!-- /.footer -->
 
     <!-- Connecting the widget feedback through social networks -->
-    <script type="text/javascript" src="https://spikmi.com/Widget?Id=1374"></script>
+    <!-- <script type="text/javascript" src="https://spikmi.com/Widget?Id=1374"></script> -->
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>

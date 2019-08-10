@@ -132,6 +132,60 @@ input[type="checkbox"]:checked + label:before {
   background-color: #507fe1;
 }
 
+.select {
+  height: 80px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+
+.select:after {
+  content: '';
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("../img/caret.png") no-repeat center;
+  background-size: 100%;
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.select_checked {
+  line-height: 80px;
+  padding-left: 30px;
+}
+
+.select__dropdown {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+.select__dropdown_open {
+  display: block;
+}
+
+.select__option {
+  padding: 20px;
+}
+
+.select__option:hover {
+  background-color: #f1f1f1;
+}
+
 .checkbox-label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,6 +282,8 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .menu_active {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -273,6 +329,14 @@ input[type="checkbox"]:checked + label:before {
   width: 70px;
 }
 
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.menu-button:focus {
+  outline: none;
+}
+
 .menu-button__line {
   display: block;
   width: 20px;
@@ -299,12 +363,6 @@ input[type="checkbox"]:checked + label:before {
   .navbar__mobile, .navbar__landline {
     display: none;
   }
-}
-
-@media (max-width: 576px) {
-  .logo {
-    display: none;
-  }
   .menu {
     top: 60px;
   }
@@ -319,6 +377,12 @@ input[type="checkbox"]:checked + label:before {
   }
   .menu__link {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    display: none;
   }
 }
 
@@ -535,6 +599,13 @@ input[type="checkbox"]:checked + label:before {
   position: relative;
   -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
           box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.catalog-card:hover .catalog-card__buttons {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .catalog-card__buttons {
@@ -544,6 +615,11 @@ input[type="checkbox"]:checked + label:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .catalog-card__button {

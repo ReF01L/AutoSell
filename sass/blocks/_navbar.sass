@@ -36,6 +36,7 @@
     opacity: 0
     transform: translateY(-200%)
     &_active
+        transition: 0.3s
         opacity: 1
         transform: translateY(0)
     &__nav
@@ -59,6 +60,10 @@
         border-left: 1px solid rgba(#510bba, 0.1)
         height: 80px
         width: 70px
+        &:hover
+            cursor: pointer
+        &:focus
+            outline: none
         &__line
             display: block
             width: 20px
@@ -81,10 +86,6 @@
     .navbar
         &__mobile, &__landline
             display: none
-
-@media (max-width: 576px)
-    .logo
-        display: none
     .menu
         top: 60px
         &-button
@@ -93,3 +94,7 @@
             flex-direction: column
         &__link
             margin-bottom: 20px
+
+@media (max-width: 576px)
+    .logo
+        display: none
